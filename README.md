@@ -8,12 +8,19 @@ This project will integrate A.I. tools such as OpeanAi for advice on lessons.
 npm install tone
 ```
 
+> **Note:** We will be using `openai` to interage with ChatGPT's natural language processing (NPL) model for assistance in the backend
+
+```bash
+npm install openai      # insall the sdk
+```
+
 
 ## To Do List 
 - [x] Get buttons to work correctly
 - [x] Play with sounds using `tone.js`
 - [x] Install tone library `npm install tone`
 - [x] Integrate `tone.js` to playNote function
+- [ ] Install `openai` sdk
 - [ ] Integrate openAI
 
 
