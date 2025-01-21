@@ -19,9 +19,9 @@ npm install openai      # insall the sdk
 - [x] Get buttons to work correctly
 - [x] Play with sounds using `tone.js`
 - [x] Install tone library `npm install tone`
-- [x] Integrate `tone.js` to playNote function
-- [ ] Install `openai` sdk
-- [ ] Integrate openAI
+- [x] Integrate `tons` to playNote function
+- [x] ~~Install `openai` sdk~~
+- [ ] ~~Integrate openAI~~
 
 
 ## Fetures to add
