@@ -1,9 +1,0 @@
-{
-    "C Major": ["C4", "E4", "G4"],
-    "G Major": ["G4", "B4", "D4"],
-    "A Minor": ["A4", "C4", "E4"],
-    "F Major": ["F4", "A4", "C4"],
-    "D Minor": ["D4", "F4", "A4"],
-    "E Major": ["E4", "G#4", "B4"],
-    "B Minor": ["B4", "D4", "F#4"]
-}
