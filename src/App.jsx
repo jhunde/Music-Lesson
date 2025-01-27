@@ -1,42 +1,42 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.css'
 import PianoKeyboard from './components/PianoKeyboard'
 import ChordVisualizer from './components/ChordVisualizer'
-import { fetchCords } from './utils/chord'
-
-function App() {
-    const [chord, setChord] = useState(["C4", "E4", "G4"])
+import { fetchChords } from './utils/chord'
+const App = () => {
+    const [chords, setChords] = useState({});
     const [currentChord, setCurrentChord] = useState([]);
     const [chordName, setChordName] = useState("");
-
-    useEffect = (() => {
-        const loadChord = async () => {
-            const chord = await fetchCords(); 
-            setChord(chord)
-        };
-        loadChord();
-    },[])
-
+  
+    useEffect(() => {
+      const loadChords = async () => {
+        const data = await fetchChords();
+        setChords(data);
+      };
+      loadChords();
+    }, []); // The dependency array is necessary here
+  
     const handleFetchChord = () => {
-        const notes = chord[chordName] || [];
-        setChordName(notes);
-    }
-
+      const notes = chords[chordName] || [];
+      setCurrentChord(notes);
+    };
+  
     return (
-        <div>
-            <h2>Piano Tutor</h2>
-            <input
-                type="text"
-                placeholder='Enter chord'
-                value={chordName}
-                onClick={(e) => setChordName(e.target.value)}
-            />
-
-            <button onClick={handleFetchChord}>Get Chord</button>
-
-            <ChordVisualizer chord={chord}/>
-            <PianoKeyboard/>
+      <div className="App">
+        <h1>Piano Tutor</h1>
+        <div className="chord-input">
+          <input
+            type="text"
+            placeholder="Enter chord (e.g., C Major)"
+            value={chordName}
+            onChange={(e) => setChordName(e.target.value)}
+          />
+          <button onClick={handleFetchChord}>Get Chord</button>
         </div>
+        <ChordVisualizer chord={currentChord} />
+        <PianoKeyboard />
+      </div>
     );
-};
-export default App
+  };
+  
+  export default App;
