@@ -1,9 +1,29 @@
 {
-    "C Major": ["C4", "E4", "G4"],
-    "G Major": ["G4", "B4", "D4"],
-    "A Minor": ["A4", "C4", "E4"],
-    "F Major": ["F4", "A4", "C4"],
-    "D Minor": ["D4", "F4", "A4"],
-    "E Major": ["E4", "G#4", "B4"],
-    "B Minor": ["B4", "D4", "F#4"]
+    "C major": ["C4", "E4", "G4"],
+    "C# major": ["C#4", "E#4", "G#4"],
+    "D major": ["D4", "F#4", "A4"],
+    "Eb major": ["Eb4", "G4", "Bb4"],
+    "E major": ["E4", "G#4", "B4"],
+    "F major": ["F4", "A4", "C4"],
+    "F# major": ["F#4", "A#4", "C#4"],
+    "G major": ["G4", "B4", "D4"],
+    "Ab major": ["Ab4", "C4", "Eb4"],
+    "A major": ["A4", "C#4", "E4"],
+    "Bb major": ["Bb4", "D4", "F4"],
+    "B major": ["B4", "D#4", "F#4"],
+
+
+    "C minor": ["C4", "Eb4", "G4"],
+    "C# minor": ["C#4", "E4", "G#4"],
+    "D minor": ["D4", "F4", "A4"],
+    "Eb minor": ["Eb4", "Gb4", "Bb4"],
+    "E minor": ["E4", "G4", "B4"],
+    "F minor": ["F4", "Ab4", "C4"],
+    "F# minor": ["F#4", "A4", "C#4"],
+    "G minor": ["G4", "Bb4", "D4"],
+    "Ab minor": ["Ab4", "Cb4", "Eb4"],
+    "A minor": ["A4", "C4", "E4"],
+    "Bb minor": ["Bb4", "Db4", "F4"],
+    "B minor": ["B4", "D4", "F#4"]
+  
 }
