@@ -22,7 +22,8 @@ npm install openai      # insall the sdk
 - [x] Integrate `tons` to playNote function
 - [x] ~~Install `openai` sdk~~
 - [ ] ~~Integrate openAI~~
-- [ ] Add all the scales 
+- [ ] Add all the scales
+- [ ] Add deminished chords to json file 
 
 ## Fetures to add
 - [x] Show all the notes being played 
