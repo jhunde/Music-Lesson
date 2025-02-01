@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './index.css'
 import PianoKeyboard from './components/PianoKeyboard'
 import ChordVisualizer from './components/ChordVisualizer'
+import ChordSelector from './components/ChordSelector'
 import { fetchChords } from './utils/chord'
 const App = () => {
     const [chords, setChords] = useState({});
@@ -34,6 +35,7 @@ const App = () => {
           <button onClick={handleFetchChord}>Get Chord</button>
         </div>
         <ChordVisualizer chord={currentChord} />
+        <ChordSelector chord={chords} onSelectorChord={setChordName}/>
         <PianoKeyboard />
       </div>
     );
