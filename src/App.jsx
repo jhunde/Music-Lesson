@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { act, useEffect, useState } from 'react'
 import './index.css'
 import PianoKeyboard from './components/PianoKeyboard'
 import ChordVisualizer from './components/ChordVisualizer'
 import ChordSelector from './components/ChordSelector'
+import VirtualPiano from './components/VirtualPiano'
 import { fetchChords } from './utils/chord'
 const App = () => {
     const [chords, setChords] = useState({});
     const [currentChord, setCurrentChord] = useState([]);
     const [chordName, setChordName] = useState("");
+    const [activeNotes, setActiveNotes] = useState([]);
   
     useEffect(() => {
       const loadChords = async () => {
@@ -17,10 +19,22 @@ const App = () => {
       loadChords();
     }, []); // The dependency array is necessary here
   
+    useEffect(()=> {
+      if (chordName){
+        setActiveNotes(chords[chordName] || []);
+      }
+      else{
+        setActiveNotes([]);
+      }
+
+    }, [chordName, chords]);
+
     const handleFetchChord = () => {
       const notes = chords[chordName] || [];
       setCurrentChord(notes);
     };
+
+    
   
     return (
       <div className="App">
@@ -36,6 +50,7 @@ const App = () => {
         </div>
         <ChordVisualizer chord={currentChord} />
         <ChordSelector chord={chords} onSelectorChord={setChordName}/>
+        <VirtualPiano activeNotes={activeNotes}  chords={chords} />
         <PianoKeyboard />
       </div>
     );
